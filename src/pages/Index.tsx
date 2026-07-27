@@ -39,8 +39,13 @@ const Index = () => {
         {/* Search */}
         <SearchBar onSelectCoin={setSelectedCoin} />
 
+        {/* Center ad units below search */}
+        <NativeBannerAd />
+        <Banner300x250Ad />
+
         {/* In-Feed Ad */}
         <InFeedAd />
+
 
         {/* Selected Coin Details */}
         {selectedCoin && (
