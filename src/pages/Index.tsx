@@ -5,6 +5,7 @@ import { SearchBar } from '@/components/SearchBar';
 import { CoinDetails } from '@/components/CoinDetails';
 import { TrendingCoins } from '@/components/TrendingCoins';
 import { InFeedAd, BannerAd } from '@/components/AdUnit';
+import { NativeBannerAd, Banner300x250Ad } from '@/components/ExternalAds';
 
 const Index = () => {
   const [selectedCoin, setSelectedCoin] = useState<string | null>(null);
@@ -38,8 +39,13 @@ const Index = () => {
         {/* Search */}
         <SearchBar onSelectCoin={setSelectedCoin} />
 
+        {/* Center ad units below search */}
+        <NativeBannerAd />
+        <Banner300x250Ad />
+
         {/* In-Feed Ad */}
         <InFeedAd />
+
 
         {/* Selected Coin Details */}
         {selectedCoin && (
